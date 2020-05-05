@@ -58,9 +58,11 @@ Test connectivity by ussing ssh type:
 ssh -i "<pem_file_name>.pem" ubuntu@<aws_instance_public_DNS>
 
 
-#PROVISIONING USING ANSIBLE (from vagrant VM)  
+#PROVISIONING USING ANSIBLE (from vagrant VM)    
+Edit the file aws_host.yml and change the ansible_host value for the correct one. (See step CREATING INFRA WITH TERRAFORM)
+
 Run the following commands:  
-- cd ansible/apache  
+- cd aws_labs_iac/ansible/apache  
 - ansible-playbook -i aws_host.yml playbook.yml
 
 
