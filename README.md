@@ -44,7 +44,7 @@ terraform apply
 
 Now you can check that the infra was created in aws console, copy the public DNS of the ec2 instance created, cause will be need it for next step.
 
-##TESTING CONECTIVITY TO EC2 INSTANCE
+## TESTING CONECTIVITY TO EC2 INSTANCE
 - Run the following commands.
 
 sudo bash  
@@ -58,7 +58,7 @@ Test connectivity by ussing ssh type:
 ssh -i "<pem_file_name>.pem" ubuntu@<aws_instance_public_DNS>
 
 
-#PROVISIONING USING ANSIBLE (from vagrant VM)    
+## PROVISIONING USING ANSIBLE (from vagrant VM)    
 Edit the file aws_host.yml and change the ansible_host value for the correct one. (See step CREATING INFRA WITH TERRAFORM)
 
 Run the following commands:  
@@ -74,7 +74,7 @@ Run the following commands:
 
 
 
-#PROVISIONING USING AWS SSM (from Aws System Manager)
+## PROVISIONING USING AWS SSM (from Aws System Manager)
 Prerequistes to run ansible from SSM 
 1) SSM Agent must be installed on the ec2 instance (By default aws ssm agent is installed in ubuntu 18.04 lts. In case you find some issues you can find more details [here](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-manual-agent-install.html#agent-install-ubuntu)
 2) Ansible should be installed on the ec2 (Ansible was installed when the ec2 instance was created, check userdata.sh)
