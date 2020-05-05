@@ -37,10 +37,10 @@ You need to have these programs in place:
 - Create a key pair in aws console (.pem) and later download on your local git repo. (Note that .gitinore file exclude all *.pem files, so if you want to update the reposioty and pushes changes *.pem won't be pushed)
 
 ## CREATING INFRA WITH TERRAFORM
-cd terraform/app_name/prod
-terraform init
-terraform plan
-terraform apply 
+cd terraform/app_name/prod  
+terraform init  
+terraform plan  
+terraform apply   
 
 ![Infra was created in AWS](./images/image02.png)  
 **FIGURE 3: Infra was created in AWS** 
