@@ -40,7 +40,11 @@ You need to have these programs in place:
 cd terraform/app_name/prod
 terraform init
 terraform plan
-terraform apply
+terraform apply 
+
+![Infra was created in AWS](./images/image02.png)  
+**FIGURE 3: Infra was created in AWS** 
+
 
 Now you can check that the infra was created in aws console, copy the public DNS of the ec2 instance created, cause will be need it for next step.
 
@@ -95,6 +99,10 @@ Next, goto Aws System Manager in your aws console and perform the following step
 - Compliance Severity -> High 
 - Click on Create Association.
 
-#DESTROYING INFRA 
+## DESTROYING INFRA 
+
+exit
+cd terraform/app_name/prod 
+terraform destroy 
 
 
