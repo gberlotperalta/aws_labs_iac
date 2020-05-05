@@ -1,4 +1,4 @@
-# AWS LAB DEVOPS
+# AWS LABS IAC (Infrastructure as code)
 How to create infra in AWS with terraform and provision the created ec2 instance with ansible (by using command line and ssm)
 
 Terraform will create:  
