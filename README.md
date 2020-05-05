@@ -34,21 +34,29 @@ You need to have these programs in place:
 
 ## SECOND STEP
 - Clone this repository again, but now in linux vm by running: **git clone https://github.com/gberlotperalta/aws_labs_iac.git** 
-- Create a key pair in aws console (.pem) and later download on your local git repo.
+- Create a key pair in aws console (.pem) and later download on your local git repo. (Note that .gitinore file exclude all *.pem files, so if you want to update the reposioty and pushes changes *.pem won't be pushed)
 
-## CREATING INFRA
+## CREATING INFRA WITH TERRAFORM
+cd terraform/app_name/prod
+terraform init
+terraform plan
+terraform apply
+
+Now you can check that the infra was created in aws console, copy the public DNS of the ec2 instance created, cause will be need it for next step.
+
+##TESTING CONECTIVITY TO EC2 INSTANCE
 - Run the following commands.
 
 sudo bash  
-cd /aws_labs_iac    
+cd /
+cd /share    
 cp <Your_Pem_File_Name>.pem /home/vagrant  
 cd /home/vagrant  
 chmod 400 <Your_Pem_File_Name>.pem  
 
-- Test connectivity by ussing ssh type:  
-ssh -i "G1B4.pem" ubuntu@<aws_instance_public_DNS>
+Test connectivity by ussing ssh type:  
+ssh -i "<pem_file_name>.pem" ubuntu@<aws_instance_public_DNS>
 
-#ssh -i "G1B4.pem" ubuntu@ec2-54-158-195-233.compute-1.amazonaws.com
 
 #PROVISIONING USING ANSIBLE (from vagrant VM)  
 Run the following commands:  
