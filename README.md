@@ -33,18 +33,14 @@ You need to have these programs in place:
 - once logged in: configure your aws client by running: **aws configure**
 
 ## SECOND STEP
-- Clone this repository again in linux box by running: **git clone https://github.com/gberlotperalta/aws_lab_devops.git** 
-- Need to specify the Key Pair in file /terraform/app_name/prod if you want to connect to it. 
-- First create and pem in aws console and later download locally.  
-- Copy the file to linux machine  
-
+- Clone this repository again, but now in linux vm by running: **git clone https://github.com/gberlotperalta/aws_labs_iac.git** 
+- Create a key pair in aws console (.pem) and later download on your local git repo.
 
 ## CREATING INFRA
-
 - Run the following commands.
 
 sudo bash  
-cd /aws_devops    
+cd /aws_labs_iac    
 cp <Your_Pem_File_Name>.pem /home/vagrant  
 cd /home/vagrant  
 chmod 400 <Your_Pem_File_Name>.pem  
