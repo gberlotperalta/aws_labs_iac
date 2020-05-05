@@ -101,8 +101,10 @@ Next, goto Aws System Manager in your aws console and perform the following step
 
 ## DESTROYING INFRA 
 
-exit
-cd terraform/app_name/prod 
-terraform destroy 
+exit  
+cd terraform/app_name/prod  
+terraform destroy  
+
+
 
 
