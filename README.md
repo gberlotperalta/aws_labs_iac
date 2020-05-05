@@ -28,7 +28,7 @@ You need to have these programs in place:
 - goto folder aws_labs_iac
 - run the follwing command: **vagrant up**
 ![Server was created with vagrant in virtual box](./images/image01.png)  
-**FIGURE 3: You can check the progress also by opening Oracle VM Virtual Box Manager**
+**FIGURE 1: You can check the progress also by opening Oracle VM Virtual Box Manager**
 - once script is done, you can connect to the VM by using the following command: **vagrant ssh awslabsiac**
 - once logged in: configure your aws client by running: **aws configure**
 
@@ -63,7 +63,14 @@ Edit the file aws_host.yml and change the ansible_host value for the correct one
 
 Run the following commands:  
 - cd aws_labs_iac/ansible/apache  
-- ansible-playbook -i aws_host.yml playbook.yml
+- ansible-playbook -i aws_host.yml playbook.yml  
+
+![Apache2 was installed in your ec2 instance](./images/image03.png)  
+**FIGURE 3: Apache2 was installed in your ec2 instance**  
+
+
+![Apache2 was installed in your ec2 instance](./images/image04.png)  
+**FIGURE 4: Now you will see that apache2 was installed on your ec2 instance, copy the AWS instance public DNS on your browser**
 
 
 
@@ -88,9 +95,6 @@ Next, goto Aws System Manager in your aws console and perform the following step
 - Compliance Severity -> High 
 - Click on Create Association.
 
+#DESTROYING INFRA 
 
-y hacer que la vpc tengo flowlogrole por defecto
 
-https://medium.com/chrisjerry/architect-using-terraform-dd1ae7da98f4
-https://jee-appy.blogspot.com/2018/07/create-aws-infrastructure-with-terraform.html
-https://medium.com/@brad.simonin/create-an-aws-vpc-and-subnet-using-terraform-d3bddcbbcb6
